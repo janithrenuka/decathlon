@@ -1,5 +1,8 @@
 import 'package:decathlon/constraints.dart';
 import 'package:decathlon/screens/all_sports.dart';
+import 'package:decathlon/screens/kids_wear.dart';
+import 'package:decathlon/screens/mens_wear.dart';
+import 'package:decathlon/screens/womens_wear.dart';
 import 'package:decathlon/widget/bottom_nav_item.dart';
 import 'package:decathlon/widget/category_card.dart';
 import 'package:flutter/material.dart';
@@ -101,24 +104,47 @@ class HomeScreen extends StatelessWidget {
                               CategoryCard(  // card 2
                                 title: "Men's",
                                 imgSrc: "assets/images/mens.jpg",
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(
+                                      builder: (context) {return MensWear();}
+                                    )
+                                  );
+                                },
                               ),
 
                               CategoryCard(  // card 3
                                 title: "Women's",
                                 imgSrc: "assets/images/womens.jpg",
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(
+                                      builder: (context) {return WomensWear();}
+                                    )
+                                  );
+                                },
                               ),
 
                               CategoryCard(  // card 4
                                 title: "Kid's",
                                 imgSrc: "assets/images/kids.png",
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(
+                                      builder: (context) {return KidsWear();}
+                                    )
+                                  );
+                                },
                               ),
 
                             ],
                         ),
                       ),
+
+                      
                     ], 
                   ),
                 ),
