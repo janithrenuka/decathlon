@@ -1,5 +1,6 @@
 import 'package:decathlon/constraints.dart';
 import 'package:decathlon/main.dart';
+import 'package:decathlon/screens/settings_screen.dart';
 import 'package:decathlon/widget/bottom_nav_item.dart';
 import 'package:decathlon/widget/item_card.dart';
 import 'package:flutter/material.dart';
@@ -156,7 +157,7 @@ class WomensWear extends StatelessWidget {
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   ),
-            color: Colors.white,
+            color: KBottomBarColor,
           ),
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           height: 65,
@@ -166,20 +167,28 @@ class WomensWear extends StatelessWidget {
             children: <Widget>[
 
               BottomNavItem(
-                title: "Today",
-                svgSrc: "assets/icons/Settings.svg",
+                title: "Home",
+                svgSrc: "assets/icons/home.svg",
+                press: () {},
               ),
               
               BottomNavItem(
-                title: "All Exercises",
-                svgSrc: "assets/icons/Settings.svg",
+                title: "Search",
+                svgSrc: "assets/icons/search.svg",
                 press: () {},
               ),
               
               BottomNavItem(
                 title: "Settings",
                 svgSrc: "assets/icons/Settings.svg",
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) {return SettingScreen();}
+                    ),
+                  );
+                },
               ),
             ]
             

@@ -7,3 +7,4 @@ const KBlueLightColor = Color(0xFFC788F5);
 const KBlueColor = Color(0xFF817DC0);
 const KShadowColor = Color(0xFFE6E6E6);
 const KGreybackgroundColor = Color(0xFFE1E1DD);
+const KBottomBarColor = Color(0xFFC0C0C0);

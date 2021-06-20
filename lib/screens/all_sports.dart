@@ -1,4 +1,6 @@
+import 'package:decathlon/constraints.dart';
 import 'package:decathlon/main.dart';
+import 'package:decathlon/screens/settings_screen.dart';
 import 'package:decathlon/widget/bottom_nav_item.dart';
 import 'package:decathlon/widget/sport_card.dart';
 import 'package:flutter/material.dart';
@@ -19,43 +21,43 @@ class AllSports extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Row(
-                      children: <Widget>[
-                        
-                        Container(
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  //color: KShadowColor,
-                                ),
-                            child: IconButton(
-                                icon: new Icon(Icons.arrow_back),
-                                color: Colors.black, 
-                                onPressed: () { 
-                                  Navigator.push(
-                                    context, 
-                                    MaterialPageRoute(builder: (context) {return HomeScreen();})
-                                  );
-                                },
-                            ),
-                        ),
-
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 20.0),
-                            child: Text(
-                              "Back",
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context)
-                                        .textTheme
-                                        .headline4
-                                        .copyWith(
-                                       fontWeight: FontWeight.w900,
-                                       fontSize: 25,
-                                      ),
-                            ),
+                        children: <Widget>[
+                          
+                          Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: KShadowColor,
+                                  ),
+                              child: IconButton(
+                                  icon: new Icon(Icons.arrow_back),
+                                  color: Colors.black, 
+                                  onPressed: () { 
+                                    Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(builder: (context) {return HomeScreen();})
+                                    );
+                                  },
+                              ),
                           ),
 
-                      ],
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 20.0),
+                              child: Text(
+                                "Back",
+                                textAlign: TextAlign.center,
+                                style: Theme.of(context)
+                                          .textTheme
+                                          .headline4
+                                          .copyWith(
+                                         fontWeight: FontWeight.w900,
+                                         fontSize: 25,
+                                        ),
+                              ),
+                            ),
+
+                        ],
                     ),
 
                     Expanded(
@@ -155,7 +157,7 @@ class AllSports extends StatelessWidget {
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   ),
-            color: Colors.white,
+            color: KBottomBarColor,
           ),
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           height: 65,
@@ -165,20 +167,35 @@ class AllSports extends StatelessWidget {
             children: <Widget>[
 
               BottomNavItem(
-                title: "Today",
-                svgSrc: "assets/icons/Settings.svg",
+                title: "Home",
+                svgSrc: "assets/icons/home.svg",
+                press: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) {return HomeScreen();}
+                    ),
+                  );
+                },
               ),
               
               BottomNavItem(
-                title: "All Exercises",
-                svgSrc: "assets/icons/Settings.svg",
+                title: "Search",
+                svgSrc: "assets/icons/search.svg",
                 press: () {},
               ),
               
               BottomNavItem(
                 title: "Settings",
                 svgSrc: "assets/icons/Settings.svg",
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) {return SettingScreen();}
+                    ),
+                  );
+                },
               ),
             ]
             

@@ -1,4 +1,3 @@
-import 'package:decathlon/constraints.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -26,8 +25,9 @@ class BottomNavItem extends StatelessWidget {
               Text(
                 title, 
                 style: TextStyle(
-                  color:  KActiveIconColor,
-                  //fontSize: 12,
+                  color:  Colors.black,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w900,
                 ), 
               ),
             ]
