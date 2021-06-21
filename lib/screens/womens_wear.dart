@@ -169,7 +169,14 @@ class WomensWear extends StatelessWidget {
               BottomNavItem(
                 title: "Home",
                 svgSrc: "assets/icons/home.svg",
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) {return HomeScreen();}
+                    ),
+                  );
+                },
               ),
               
               BottomNavItem(
