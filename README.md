@@ -1,6 +1,15 @@
 # decathlon
 
-A new Flutter project.
+<h3><b>Simple flutter UI design for mobile application called Decathlon.</b></h3>
+
+<img src="https://github.com/janithrenuka/decathlon/blob/main/assets/ss/1.png" align="left" height="260" width="110">
+<img src="https://github.com/janithrenuka/decathlon/blob/main/assets/ss/2.png" align="left" height="260" width="110">
+<img src="https://github.com/janithrenuka/decathlon/blob/main/assets/ss/3.png" align="left" height="260" width="110">
+<img src="https://github.com/janithrenuka/decathlon/blob/main/assets/ss/4.png" align="left" height="260" width="110">
+<img src="https://github.com/janithrenuka/decathlon/blob/main/assets/ss/5.png" align="left" height="260" width="110">
+<img src="https://github.com/janithrenuka/decathlon/blob/main/assets/ss/6.png" align="left" height="260" width="110">
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 ## Getting Started
 
